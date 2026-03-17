@@ -1,0 +1,121 @@
+/* --- PAGE CONTACT --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 60px 0;
+}
+
+/* Cartes Salariés */
+.employee-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid var(--primary);
+    display: flex;
+    align-items: center;
+}
+
+.employee-card h3 {
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.role {
+    color: var(--secondary);
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.contact-link {
+    display: block;
+    text-decoration: none;
+    color: var(--dark);
+    margin: 8px 0;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.contact-link i {
+    color: var(--primary);
+    width: 20px;
+    margin-right: 10px;
+}
+
+.contact-link:hover {
+    color: var(--secondary);
+    padding-left: 5px;
+}
+
+/* Formulaire */
+.form-container {
+    background: var(--primary);
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.form-container h2 {
+    margin-bottom: 25px;
+    font-family: 'Playfair Display', serif;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-checkbox {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.form-checkbox a {
+    color: white;
+    text-decoration: underline;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background: #a6734d;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
