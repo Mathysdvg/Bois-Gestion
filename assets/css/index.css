@@ -1,29 +1,3 @@
-/* Variables de couleurs Nature */
-:root {
-    --primary: #2d4739;
-    /* Vert forêt */
-    --secondary: #8b5e3c;
-    /* Couleur bois */
-    --light: #f4f1ea;
-    /* Blanc cassé */
-    --dark: #1a1a1a;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: var(--light);
-}
-
 /* Section Main & Cards */
 .main {
     padding: 80px 10%;

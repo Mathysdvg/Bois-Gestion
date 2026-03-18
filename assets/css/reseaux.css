@@ -1,15 +1,3 @@
-/* Hero réduit pour les pages secondaires */
-.hero-small {
-    height: 40vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/arbre.jpeg') center/cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-}
-
 /* Facebook Card */
 .social-section {
     padding: 60px 0;
@@ -31,48 +19,75 @@
     margin-bottom: 20px;
 }
 
-/* Galerie Photos */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    height: 250px;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.5s;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.1);
-}
-
-.overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(45, 71, 57, 0.8);
-    /* Ton vert forêt */
-    color: white;
-    padding: 10px;
+.gallery-hint {
     text-align: center;
-    transform: translateY(100%);
+    font-size: 14px;
+    color: var(--secondary);
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+/* --- Le Slider Horizontal --- */
+.gallery-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    /* Aimantage horizontal */
+    gap: 20px;
+    padding: 20px 10%;
+    /* Aligné avec le padding du nav */
+    scrollbar-width: none;
+    /* Cache la barre sur Firefox */
+}
+
+.gallery-slider::-webkit-scrollbar {
+    display: none;
+    /* Cache la barre sur Chrome/Safari */
+}
+
+.gallery-card {
+    flex: 0 0 400px;
+    /* Largeur fixe de chaque carte */
+    scroll-snap-align: center;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: 0.3s;
 }
 
-.gallery-item:hover .overlay {
-    transform: translateY(0);
+.gallery-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-desc {
+    padding: 20px;
+}
+
+.card-desc h3 {
+    color: var(--primary);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card-desc p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* --- Ajustements Responsive --- */
+@media (max-width: 768px) {
+    .gallery-card {
+        flex: 0 0 85%;
+        /* Plus large sur mobile pour voir qu'il y a une suite */
+    }
+
+    .gallery-slider {
+        padding: 20px 7%;
+    }
 }
 
 /* Avis Google */

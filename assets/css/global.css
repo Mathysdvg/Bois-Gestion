@@ -24,6 +24,18 @@ body {
     background-color: var(--light);
 }
 
+/* Hero réduit pour les pages secondaires */
+.hero-small {
+    height: 40vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/tronçons.jpeg') center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
 /* --- Navigation --- */
 nav {
     display: flex;

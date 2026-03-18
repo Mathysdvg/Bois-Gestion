@@ -1,0 +1,151 @@
+/* Intro */
+.intro-technique {
+    text-align: center;
+    padding: 50px 0;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 15px;
+    background: var(--secondary);
+    color: white;
+    border-radius: 50px;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* Liste de produits asymétrique */
+.produit-item {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 100px;
+}
+
+.produit-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.produit-figure {
+    flex: 1;
+    position: relative;
+}
+
+.produit-figure img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.produit-figure .tag {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 8px 15px;
+    font-weight: bold;
+    font-size: 13px;
+    color: var(--primary);
+}
+
+.produit-texte {
+    flex: 1;
+}
+
+/* --- Boutons spécifiques aux produits --- */
+.btn-product {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: var(--primary);
+    /* Vert forêt */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s ease;
+    border: 1px solid var(--primary);
+}
+
+.btn-product:hover {
+    background-color: transparent;
+    color: var(--primary);
+}
+
+/* --- Bannière LeBonCoin --- */
+.lbc-banner {
+    background: #fdf2f0;
+    /* Fond très légèrement orangé pour rappeler LBC */
+    border: 1px solid #ff6e14;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    border-radius: 12px;
+    margin: 60px 0;
+}
+
+.lbc-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.lbc-content i {
+    font-size: 40px;
+    color: #ff6e14;
+}
+
+.lbc-content h4 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.btn-lbc {
+    background: #ff6e14;
+    /* Orange LeBonCoin */
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(255, 110, 20, 0.3);
+    transition: 0.3s;
+}
+
+.btn-lbc:hover {
+    background: #e65a00;
+    transform: translateY(-2px);
+}
+
+/* Pour le texte descriptif (le petit numéro 01, 02) */
+.produit-texte small {
+    font-size: 60px;
+    font-family: 'Playfair Display';
+    color: rgba(45, 71, 57, 0.08);
+    /* Votre vert forêt très transparent */
+    display: block;
+    margin-bottom: -35px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+    .produit-item,
+    .produit-item.reverse {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .lbc-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
