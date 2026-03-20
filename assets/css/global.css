@@ -42,11 +42,15 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px 10%;
-    background: #fff;
+    background: var(--primary);
+    /* Fond Vert Forêt comme le footer */
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Ombre un peu plus profonde */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* Petit filet subtil */
 }
 
 /* Taille du Logo Image */
@@ -65,22 +69,40 @@ nav .logo img {
 
 .onglets a {
     text-decoration: none;
-    color: var(--dark);
+    color: white;
+    /* Texte blanc comme dans le footer */
     margin-left: 20px;
     font-weight: 500;
+    font-size: 15px;
     transition: 0.3s;
+    opacity: 0.8;
+    /* Légère transparence par défaut */
 }
 
 .onglets a:hover {
     color: var(--secondary);
+    /* Devient marron au survol */
+    opacity: 1;
 }
 
 /* Style spécifique pour le bouton contact dans le menu */
+/* Style spécifique pour le bouton contact dans le menu */
 .btn-nav {
-    background: var(--primary);
+    background: var(--secondary) !important;
+    /* Marron bois pour trancher sur le vert */
     color: white !important;
-    padding: 8px 15px;
+    padding: 8px 18px;
     border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Menu Burger pour mobile (on change la couleur des barres en blanc) */
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    /* Barres blanches sur fond vert */
+    transition: 0.3s;
 }
 
 /* --- Menu Burger (Caché par défaut) --- */
@@ -89,13 +111,6 @@ nav .logo img {
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
-}
-
-.menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background-color: var(--primary);
-    transition: 0.3s;
 }
 
 /* --- Mobile Responsive --- */
@@ -110,17 +125,9 @@ nav .logo img {
     }
 
     .onglets {
-        display: none;
-        /* On cache le menu normal */
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        /* Juste en dessous du nav */
-        left: 0;
-        width: 100%;
-        background-color: white;
-        padding: 20px 0;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        background-color: var(--primary);
+        /* Menu mobile vert également */
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     /* Classe qui sera ajoutée en JS pour ouvrir le menu */

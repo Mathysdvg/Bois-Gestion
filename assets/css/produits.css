@@ -233,3 +233,26 @@
         gap: 20px;
     }
 }
+
+/* Style du sélecteur */
+.dept-selector {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.dept-selector label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.custom-select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 300px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}

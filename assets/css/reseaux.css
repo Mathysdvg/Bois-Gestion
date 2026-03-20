@@ -135,3 +135,24 @@
     padding: 10px 20px;
     border-radius: 50px;
 }
+
+/* --- Boutons spécifiques aux produits --- */
+.btn-product {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: var(--primary);
+    /* Vert forêt */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s ease;
+    border: 1px solid var(--primary);
+}
+
+.btn-product:hover {
+    background-color: transparent;
+    color: var(--primary);
+}

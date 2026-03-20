@@ -126,6 +126,76 @@ hr {
     margin-bottom: 30px;
 }
 
+/* --- Style FAQ --- */
+.faq-section {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.faq-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: var(--primary);
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.faq-container {
+    border-top: 1px solid #ddd;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--primary);
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background-color: rgba(45, 71, 57, 0.05);
+}
+
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+    background-color: #fff;
+}
+
+.faq-answer p {
+    padding-bottom: 20px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Classe active pour l'animation (sera ajoutée via JS) */
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    /* Ajuste selon la longueur du texte */
+    padding-top: 10px;
+}
+
+.faq-item.active i {
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
+
 /* --- STYLISATION DE L'IFRAME (MAP) --- */
 
 .info-box iframe {
