@@ -121,3 +121,83 @@
     margin-left: 20px;
     margin-bottom: 15px;
 }
+
+/* --- SECTION STATISTIQUES --- */
+.stats-section {
+    background-color: var(--primary);
+    /* Ton vert forêt */
+    color: white;
+    padding: 80px 0;
+    margin: 60px 0;
+}
+
+.container-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat-item {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    /* État initial pour l'animation d'apparition */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+/* Classe ajoutée par le JS quand l'élément est visible */
+.stat-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stat-item i {
+    font-size: 3rem;
+    color: var(--secondary);
+    /* Ton marron/orange */
+    margin-bottom: 20px;
+}
+
+.stat-number-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    line-height: 1;
+}
+
+.stat-suffix {
+    font-size: 1.5rem;
+    color: var(--secondary);
+    margin-left: 5px;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .stats-section {
+        padding: 50px 0;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+}

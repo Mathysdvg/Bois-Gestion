@@ -156,3 +156,54 @@
     background-color: transparent;
     color: var(--primary);
 }
+
+/* Flèches de navigation */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 1001;
+}
+
+.next {
+    right: 50px;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 50px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--secondary);
+}
+
+/* Cacher les flèches sur petit écran si besoin */
+@media (max-width: 600px) {
+
+    .prev,
+    .next {
+        font-size: 25px;
+        padding: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+
+    .prev {
+        left: 10px;
+    }
+}
