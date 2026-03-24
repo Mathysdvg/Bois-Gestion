@@ -28,6 +28,16 @@ function animateCounters() {
 
 // Intersection Observer pour lancer l'animation quand la section est visible
 document.addEventListener('DOMContentLoaded', () => {
+    // 1. Calcul automatique des années depuis 2012
+    const startYear = 2012;
+    const currentYear = new Date().getFullYear(); // Récupère 2026, 2027, etc.
+    const yearsOfExp = currentYear - startYear;
+
+    // 2. On met à jour l'attribut data-target dynamiquement
+    const expElement = document.getElementById('experience-years');
+    if (expElement) {
+        expElement.setAttribute('data-target', yearsOfExp);
+    }
     const statsSection = document.querySelector('.stats-section');
     const statItems = document.querySelectorAll('.stat-item');
 

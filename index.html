@@ -23,6 +23,7 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap"
         rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
@@ -43,40 +44,48 @@
                 <p>
                     Depuis sa création, <strong>Bois Gestion</strong> s’engage pour une gestion durable et valorisée des
                     massifs forestiers.
-                    Spécialisés dans l’achat, la vente et l’exploitation forestière, nous intervenons dans tout le
-                    <strong>Grand Ouest</strong>
-                    (Bretagne, Pays de la Loire, Centre).
                 </p>
             </div>
 
-            <div class="card" id="valeurs">
-                <div class="left">
-                    <span class="role">Gérant</span>
-                    <h2>Pascal Dagorne</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus
-                        tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam
-                    </p>
-                </div>
-                <div class="right">
-                    <img src="assets/images/tronçons2.jpeg" alt="Pascal Dagorne - Expertise de grumes">
-                </div>
-            </div>
+            <h2 class="section-title">Notre Équipe</h2>
 
-            <div class="card inverse">
-                <div class="left">
-                    <span class="role">Directrice & Coordination</span>
-                    <h2>Marie Dagorne</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus
-                        tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam
-                    </p>
-                </div>
-                <div class="right">
-                    <img src="assets/images/tronçons2.jpeg" alt="Marie Dagorne - Direction Bois Gestion">
-                </div>
-            </div>
+            <div class="team-grid">
 
+                <div class="member-card">
+                    <div class="member-image">
+                        <img src="assets/images/tronçons2.jpeg" alt="Pascal Dagorne">
+                    </div>
+                    <div class="member-info">
+                        <span class="role">Gérant</span>
+                        <h3>Pascal Dagorne</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="member-image">
+                        <img src="assets/images/tronçons2.jpeg" alt="Marie Dagorne">
+                    </div>
+                    <div class="member-info">
+                        <span class="role">Directrice & Coordination</span>
+                        <h3>Marie Dagorne</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="member-image">
+                        <img src="assets/images/kercus.jpeg" alt="Kercus">
+                    </div>
+                    <div class="member-info">
+                        <span class="role">Assistant</span>
+                        <h3>Kercus</h3>
+                        <p>Expert en analyse de terrain et gestion du moral. Son flair est inégalé dans tout le Grand
+                            Ouest.</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -86,7 +95,7 @@
             <div class="stat-item">
                 <i class="fas fa-history"></i>
                 <div class="stat-number-wrapper">
-                    <span class="stat-number" data-target="14">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-number" id="experience-years">0</span><span class="stat-suffix">+</span>
                 </div>
                 <p class="stat-label">Années d'Expérience</p>
             </div>
@@ -118,10 +127,92 @@
         </div>
     </section>
 
+    <section class="gallery">
+        <div class="container-gallery">
+
+            <div class="gallery-header">
+                <h2></i> Notre actualité en images</h2>
+                <p>Retrouvez les coulisses de nos chantiers dans le Grand Ouest.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/images/gallerie/gros_troncon.jpeg" alt="Exploitation forestière - Bois Gestion"
+                        class="gallery-image">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/images/gallerie/grosse_pile_bois.jpeg" alt="Transport de bois - Bois Gestion"
+                        class="gallery-image">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/images/gallerie/grosse_pile_piquet.jpeg" alt="Valorisation chêne - Bois Gestion"
+                        class="gallery-image">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/images/gallerie/chemin_neige.jpeg" alt="Chantier Bretagne - Bois Gestion"
+                        class="gallery-image">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/images/gallerie/petit_pile_piquet.jpeg" alt="Équipe Bois Gestion au travail"
+                        class="gallery-image">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/images/gallerie/kercus_cote.jpeg" alt="Stock bois de chauffage"
+                        class="gallery-image">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/images/gallerie/pile_bois_piquet.jpeg" alt="Stock bois de chauffage"
+                        class="gallery-image">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/images/gallerie/pile_piquet.jpeg" alt="Stock bois de chauffage"
+                        class="gallery-image">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/images/gallerie/pile_bois_piquet2.jpeg" alt="Stock bois de chauffage"
+                        class="gallery-image">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+            </div>
+
+            <div class="gallery-footer">
+                <a href="https://www.instagram.com/ton_pseudo_ici/" target="_blank" class="btn-insta">
+                    <i class="fab fa-instagram"></i> Voir plus sur Instagram
+                </a>
+                <a href="https://www.facebook.com/ton_pseudo_ici/" target="_blank" class="btn-facebook">
+                    <i class="fab fa-facebook-f"></i> Voir plus sur Facebook
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="Zoom photo">
+        <div id="lightbox-caption"></div>
+    </div>
+
     <div id="footer-placeholder"></div>
 
     <script src="assets/js/counter.js"></script>
     <script src="assets/js/includes.js"></script>
+    <script src="assets/js/gallery.js"></script>
 </body>
 
 </html>

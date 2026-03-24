@@ -329,3 +329,27 @@ footer {
         /* Prend toute la largeur pour cliquer facilement */
     }
 }
+
+.footer-socials {
+    margin-top: 15px;
+    /* Espace en dessous de "Nous contacter" */
+    display: flex;
+    gap: 20px;
+    /* Espace entre les deux icônes */
+}
+
+.footer-socials a {
+    color: white;
+    /* Icônes en blanc */
+    font-size: 1.5rem;
+    /* Taille des icônes */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    text-decoration: none;
+}
+
+.footer-socials a:hover {
+    transform: translateY(-3px);
+    /* Petit saut au survol */
+    opacity: 0.8;
+    /* Légère transparence au survol */
+}

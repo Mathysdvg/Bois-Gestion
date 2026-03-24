@@ -17,21 +17,31 @@
     margin-bottom: 15px;
 }
 
-/* Liste de produits asymétrique */
+/* Modification de l'item produit */
 .produit-item {
     display: flex;
-    align-items: center;
-    gap: 60px;
-    margin-bottom: 100px;
+    align-items: stretch;
+    /* Aligne la hauteur du texte et de l'image */
+    gap: 40px;
+    margin-bottom: 80px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 24px;
+    /* Coins plus arrondis pour un look moderne */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
-.produit-item.reverse {
-    flex-direction: row-reverse;
+.produit-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
 .produit-figure {
-    flex: 1;
-    position: relative;
+    flex: 1.2;
+    /* L'image prend un peu plus de place */
+    overflow: hidden;
+    border-radius: 18px;
 }
 
 .produit-figure img {
@@ -39,33 +49,79 @@
     height: 400px;
     object-fit: cover;
     border-radius: 4px;
+    transition: transform 0.6s ease;
 }
 
+.produit-item:hover .produit-figure img {
+    transform: scale(1.05);
+    /* Zoom doux au survol du bloc */
+}
+
+/* Tag style "Pill" moderne */
 .produit-figure .tag {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 8px 15px;
-    font-weight: bold;
-    font-size: 13px;
+    top: 15px;
+    left: 15px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    /* Effet flou derrière le tag */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 11px;
+    letter-spacing: 1px;
     color: var(--primary);
 }
 
 .produit-texte {
     flex: 1;
-    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
 }
 
-
-/* Curseur sur les images cliquables */
-.produit-figure img {
-    cursor: pointer;
-    transition: 0.3s;
+.produit-texte small {
+    font-size: 80px;
+    /* Plus grand pour l'aspect design */
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    opacity: 0.05;
+    /* Très subtil */
+    margin-bottom: 0;
+    pointer-events: none;
 }
 
-.produit-figure img:hover {
-    opacity: 0.8;
+.produit-texte h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+
+.produit-texte p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+/* Sélecteur moderne */
+.custom-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23666' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 15px) center;
+    padding: 12px 20px;
+    border: 2px solid #eee;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+.custom-select:focus {
+    border-color: var(--primary);
+    outline: none;
+    background-color: #fff;
 }
 
 /* Le fond de la fenêtre modal */
@@ -156,56 +212,11 @@
     border: 1px solid var(--primary);
 }
 
+
 .btn-product:hover {
     background-color: transparent;
     color: var(--primary);
-}
 
-/* --- Bannière LeBonCoin --- */
-.lbc-banner {
-    background: #fdf2f0;
-    /* Fond très légèrement orangé pour rappeler LBC */
-    border: 1px solid #ff6e14;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 50px;
-    border-radius: 12px;
-    margin: 60px 0;
-}
-
-.lbc-content {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.lbc-content i {
-    font-size: 40px;
-    color: #ff6e14;
-}
-
-.lbc-content h4 {
-    margin: 0;
-    font-size: 20px;
-    color: #333;
-}
-
-.btn-lbc {
-    background: #ff6e14;
-    /* Orange LeBonCoin */
-    color: white;
-    text-decoration: none;
-    padding: 15px 30px;
-    border-radius: 8px;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(255, 110, 20, 0.3);
-    transition: 0.3s;
-}
-
-.btn-lbc:hover {
-    background: #e65a00;
-    transform: translateY(-2px);
 }
 
 /* Pour le texte descriptif (le petit numéro 01, 02) */
@@ -219,21 +230,6 @@
     font-weight: bold;
 }
 
-@media (max-width: 768px) {
-
-    .produit-item,
-    .produit-item.reverse {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .lbc-banner {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-}
-
 /* Style du sélecteur */
 .dept-selector {
     margin: 15px 0;
@@ -245,14 +241,4 @@
     font-size: 14px;
     margin-bottom: 5px;
     color: #666;
-}
-
-.custom-select {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 100%;
-    max-width: 300px;
-    font-family: 'Montserrat', sans-serif;
-    cursor: pointer;
 }
