@@ -1,4 +1,12 @@
+# Autoriser tous les robots (Google, Bing, etc.)
 User-agent: *
-Allow: /
 
-Sitemap: https://tonsite.fr/sitemap.xml
+# Pages à ne pas indexer (si tu as des dossiers de travail ou de tests)
+Disallow: /assets/css/
+Disallow: /assets/js/
+Disallow: /assets/images/logo/
+
+# Lien vers ton plan de site (Sitemap) pour aider l'indexation
+Sitemap: https://www.bois-gestion.fr/sitemap.xml
+
+# Fin du fichier
