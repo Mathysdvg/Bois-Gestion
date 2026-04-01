@@ -24,7 +24,7 @@
     text-align: center;
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
-    margin: 40px 0;
+    margin: 40px 20px;
     color: #2c3e50;
 }
 
@@ -32,22 +32,17 @@
 .team-grid {
     display: flex;
     flex-wrap: wrap;
-    /* Permet de passer à la ligne sur mobile */
     justify-content: center;
     gap: 30px;
-    /* Espace entre les cartes */
-    padding: 20px 0;
+    padding: 20px;
 }
 
 /* Carte individuelle */
 .member-card {
     background: #fff;
     flex: 1;
-    /* Les cartes prennent la même largeur */
     min-width: 280px;
-    /* Largeur minimum pour ne pas être trop écrasées */
     max-width: 350px;
-    /* Largeur maximum pour rester élégant */
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
@@ -58,18 +53,14 @@
 
 .member-card:hover {
     transform: translateY(-10px);
-    /* Petit effet de survol */
 }
 
-/* Image du membre */
 .member-image img {
     width: 100%;
     height: 250px;
     object-fit: cover;
-    /* Coupe l'image proprement pour qu'elles aient toutes la même taille */
 }
 
-/* Texte sous l'image */
 .member-info {
     padding: 20px;
     text-align: center;
@@ -79,7 +70,6 @@
     text-transform: uppercase;
     font-size: 0.8rem;
     color: #8b5a2b;
-    /* Couleur bois */
     font-weight: bold;
     letter-spacing: 1px;
 }
@@ -96,17 +86,10 @@
     line-height: 1.5;
 }
 
-/* Responsive : sur mobile, on s'assure qu'ils prennent plus de place */
-@media (max-width: 768px) {
-    .member-card {
-        max-width: 100%;
-    }
-}
-
 /* Style pour les pages légales */
 .legal-content {
     max-width: 800px;
-    margin: 60px auto;
+    margin: 40px auto;
     padding: 20px;
     background: white;
     border-radius: 8px;
@@ -118,6 +101,7 @@
     color: var(--primary);
     margin-bottom: 30px;
     font-family: 'Playfair Display', serif;
+    font-size: 28px;
 }
 
 .legal-content h3 {
@@ -134,15 +118,14 @@
 /* --- SECTION STATISTIQUES --- */
 .stats-section {
     background-color: var(--primary);
-    /* Ton vert forêt */
     color: white;
-    padding: 80px 0;
+    padding: 80px 20px;
     margin: 60px 0;
 }
 
 .container-stats {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 40px;
     text-align: center;
     width: 90%;
@@ -154,13 +137,11 @@
     padding: 20px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 10px;
-    /* État initial pour l'animation d'apparition */
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.6s ease-out;
 }
 
-/* Classe ajoutée par le JS quand l'élément est visible */
 .stat-item.visible {
     opacity: 1;
     transform: translateY(0);
@@ -169,7 +150,6 @@
 .stat-item i {
     font-size: 3rem;
     color: var(--secondary);
-    /* Ton marron/orange */
     margin-bottom: 20px;
 }
 
@@ -200,25 +180,13 @@
     color: rgba(255, 255, 255, 0.8);
 }
 
-/* --- RESPONSIVE --- */
-@media (max-width: 768px) {
-    .stats-section {
-        padding: 50px 0;
-    }
-
-    .stat-number {
-        font-size: 2.5rem;
-    }
-}
-
 /* ============================================= */
-/* CSS DE LA GALERIE PHOTO STYLE INSTAGRAM       */
+/* CSS DE LA GALERIE PHOTO                       */
 /* ============================================= */
 
 .gallery {
     padding: 60px 0;
     background-color: var(--light);
-    /* Fond légèrement gris pour détacher la section */
 }
 
 .container-gallery {
@@ -236,13 +204,11 @@
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     color: #333;
-    /* Ajuste selon ton charte (ex: couleur bois) */
     margin-bottom: 10px;
 }
 
 .gallery-header h2 i {
     color: #833AB4;
-    /* Couleur dégradé Insta optionnelle */
 }
 
 .gallery-header p {
@@ -251,24 +217,18 @@
     font-size: 1.1rem;
 }
 
-/* La Grille Instagram */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* 3 colonnes par défaut */
     gap: 20px;
-    /* Espace entre les photos */
 }
 
-/* Force les éléments à être carrés */
 .gallery-item {
     position: relative;
     overflow: hidden;
     padding-bottom: 100%;
-    /* Ratio 1:1 (Carré) */
     cursor: pointer;
     border-radius: 8px;
-    /* Optionnel : coins légèrement arrondis */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -279,11 +239,9 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Important : coupe l'image pour qu'elle remplisse le carré */
     transition: transform 0.3s ease;
 }
 
-/* Effet au survol (Overlay noir et icône) */
 .overlay {
     position: absolute;
     top: 0;
@@ -291,12 +249,10 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Fond noir semi-transparent */
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    /* Invisible par défaut */
     transition: opacity 0.3s ease;
 }
 
@@ -307,18 +263,19 @@
 
 .gallery-item:hover .gallery-image {
     transform: scale(1.1);
-    /* Zoom léger de l'image */
 }
 
 .gallery-item:hover .overlay {
     opacity: 1;
-    /* Rendre l'overlay visible au survol */
 }
 
-/* Bouton Voir plus */
 .gallery-footer {
     text-align: center;
     margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 
 .btn-insta {
@@ -356,38 +313,33 @@
 }
 
 /* ============================================= */
-/* CSS POUR LA LIGHTBOX (GRAND ÉCRAN)          */
+/* LIGHTBOX                                      */
 /* ============================================= */
 
 .lightbox {
     display: none;
-    /* Caché par défaut */
     position: fixed;
     z-index: 9999;
-    /* Au-dessus de tout */
-    padding-top: 100px;
+    padding-top: 80px;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.9);
-    /* Fond noir très opaque */
 }
 
 .lightbox-content {
     margin: auto;
     display: block;
-    width: 80%;
+    width: 90%;
     max-width: 800px;
     max-height: 80vh;
     object-fit: contain;
-    /* L'image entière doit être visible */
     border: 4px solid white;
     border-radius: 4px;
 }
 
-/* Animation d'ouverture */
 .lightbox-content,
 #lightbox-caption {
     animation-name: zoom;
@@ -406,10 +358,10 @@
 
 .lightbox-close {
     position: absolute;
-    top: 50px;
-    right: 50px;
+    top: 30px;
+    right: 30px;
     color: #f1f1f1;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: bold;
     transition: 0.3s;
     cursor: pointer;
@@ -424,7 +376,7 @@
 #lightbox-caption {
     margin: auto;
     display: block;
-    width: 80%;
+    width: 90%;
     max-width: 700px;
     text-align: center;
     color: #ccc;
@@ -433,15 +385,65 @@
     height: 150px;
 }
 
-/* ============================================= */
-/* RESPONSIVE (MOBILES ET TABLETTES)             */
-/* ============================================= */
+/* ===================== */
+/* RESPONSIVE TABLETTES  */
+/* ===================== */
+@media (max-width: 900px) {
+    .section-title {
+        font-size: 2rem;
+    }
 
-/* Tablettes */
+    .stat-number {
+        font-size: 2.8rem;
+    }
+}
+
+/* ===================== */
+/* RESPONSIVE MOBILE     */
+/* ===================== */
 @media (max-width: 768px) {
+    .intro-entreprise h2 {
+        font-size: 26px;
+    }
+
+    .intro-entreprise p {
+        font-size: 15px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin: 30px 15px;
+    }
+
+    .member-card {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .member-image img {
+        height: 220px;
+    }
+
+    .stats-section {
+        padding: 50px 15px;
+    }
+
+    .container-stats {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
+    }
+
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
-        /* 2 colonnes sur tablette */
         gap: 10px;
     }
 
@@ -450,23 +452,49 @@
     }
 
     .lightbox-close {
-        top: 20px;
-        right: 20px;
+        top: 15px;
+        right: 15px;
         font-size: 40px;
+    }
+
+    .gallery {
+        padding: 40px 0;
     }
 }
 
-/* Mobiles */
+/* ===================== */
+/* RESPONSIVE PETITS     */
+/* ===================== */
 @media (max-width: 480px) {
+    .intro-entreprise h2 {
+        font-size: 22px;
+    }
 
-    /* Tu peux choisir 1 ou 2 colonnes selon tes goûts */
+    .container-stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stat-item i {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 5px;
     }
 
     .lightbox-content {
-        width: 95%;
-        /* Prend plus de place sur petit écran */
+        width: 98%;
+        border-width: 2px;
+    }
+
+    .legal-content h1 {
+        font-size: 22px;
     }
 }

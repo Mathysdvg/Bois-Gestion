@@ -1,11 +1,12 @@
 .page-prestations {
-    padding: 60px 0;
+    padding: 60px 20px;
 }
 
 .intro-prestations {
     text-align: center;
     max-width: 800px;
     margin: 0 auto 60px;
+    padding: 0 15px;
 }
 
 .intro-prestations h2 {
@@ -18,10 +19,8 @@
 /* Grille de services */
 .services-grid {
     display: grid;
-    /* Crée autant de colonnes de 300px min que possible */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    /* Espace entre les cartes */
     margin-bottom: 50px;
 }
 
@@ -107,10 +106,111 @@
 .cta-box p {
     margin-bottom: 30px;
     opacity: 0.9;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
+/* Bouton CTA */
+.cta-box a,
+.cta-box button {
+    display: inline-block;
+    padding: 14px 30px;
+    background: var(--secondary);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cta-box a:hover,
+.cta-box button:hover {
+    background: #7a5235;
+}
+
+/* ===================== */
+/* RESPONSIVE TABLETTES  */
+/* ===================== */
+@media (max-width: 900px) {
+    .intro-prestations h2 {
+        font-size: 30px;
+    }
+
+    .cta-section {
+        padding: 50px 30px;
+    }
+
+    .cta-box h3 {
+        font-size: 26px;
+    }
+}
+
+/* ===================== */
+/* RESPONSIVE MOBILE     */
+/* ===================== */
 @media (max-width: 768px) {
+    .page-prestations {
+        padding: 40px 15px;
+    }
+
+    .intro-prestations {
+        margin-bottom: 40px;
+    }
+
+    .intro-prestations h2 {
+        font-size: 26px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-card {
+        padding: 30px 20px;
+    }
+
+    .service-content h3 {
+        font-size: 20px;
+    }
+
     .cta-section {
         padding: 40px 20px;
+        border-radius: 12px;
+    }
+
+    .cta-box h3 {
+        font-size: 22px;
+    }
+
+    .cta-box p {
+        font-size: 15px;
+    }
+}
+
+/* ===================== */
+/* RESPONSIVE PETITS     */
+/* ===================== */
+@media (max-width: 480px) {
+    .intro-prestations h2 {
+        font-size: 22px;
+    }
+
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .service-content h3 {
+        font-size: 18px;
+    }
+
+    .cta-box h3 {
+        font-size: 20px;
     }
 }

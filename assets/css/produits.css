@@ -1,7 +1,7 @@
 /* Intro */
 .intro-technique {
     text-align: center;
-    padding: 50px 0;
+    padding: 50px 20px;
     max-width: 700px;
     margin: 0 auto;
 }
@@ -17,17 +17,15 @@
     margin-bottom: 15px;
 }
 
-/* Modification de l'item produit */
+/* Item produit */
 .produit-item {
     display: flex;
     align-items: stretch;
-    /* Aligne la hauteur du texte et de l'image */
     gap: 40px;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     background: #ffffff;
     padding: 20px;
     border-radius: 24px;
-    /* Coins plus arrondis pour un look moderne */
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
     border: 1px solid rgba(0, 0, 0, 0.03);
 }
@@ -39,31 +37,29 @@
 
 .produit-figure {
     flex: 1.2;
-    /* L'image prend un peu plus de place */
     overflow: hidden;
     border-radius: 18px;
+    min-width: 0;
 }
 
 .produit-figure img {
     width: 100%;
-    height: 400px;
+    height: 350px;
     object-fit: cover;
     border-radius: 4px;
     transition: transform 0.6s ease;
+    display: block;
 }
 
 .produit-item:hover .produit-figure img {
     transform: scale(1.05);
-    /* Zoom doux au survol du bloc */
 }
 
-/* Tag style "Pill" moderne */
 .produit-figure .tag {
     top: 15px;
     left: 15px;
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
-    /* Effet flou derrière le tag */
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 6px 16px;
     border-radius: 100px;
@@ -79,22 +75,21 @@
     justify-content: center;
     padding: 20px;
     position: relative;
+    min-width: 0;
 }
 
 .produit-texte small {
-    font-size: 80px;
-    /* Plus grand pour l'aspect design */
-    position: absolute;
-    top: -10px;
-    right: 20px;
-    opacity: 0.05;
-    /* Très subtil */
-    margin-bottom: 0;
+    font-size: 60px;
+    font-family: 'Playfair Display';
+    color: rgba(45, 71, 57, 0.08);
+    display: block;
+    margin-bottom: -35px;
+    font-weight: bold;
     pointer-events: none;
 }
 
 .produit-texte h3 {
-    font-size: 28px;
+    font-size: 26px;
     margin-bottom: 15px;
     color: #1a1a1a;
     line-height: 1.2;
@@ -106,7 +101,7 @@
     font-size: 15px;
 }
 
-/* Sélecteur moderne */
+/* Sélecteur */
 .custom-select {
     appearance: none;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23666' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
@@ -116,6 +111,9 @@
     border: 2px solid #eee;
     background-color: #f9f9f9;
     transition: border-color 0.3s;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 15px;
 }
 
 .custom-select:focus {
@@ -124,37 +122,33 @@
     background-color: #fff;
 }
 
-/* Le fond de la fenêtre modal */
+/* Modal */
 .modal {
     display: none;
-    /* Caché par défaut */
     position: fixed;
     z-index: 1000;
-    padding-top: 100px;
+    padding-top: 80px;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
-    /* Fond noir opaque */
     backdrop-filter: blur(5px);
 }
 
-/* L'image à l'intérieur du modal */
 .modal-content {
     margin: auto;
     display: block;
-    max-width: 80%;
+    max-width: 85%;
     max-height: 80vh;
     border: 3px solid white;
     border-radius: 5px;
 }
 
-/* Légende sous l'image */
 #caption {
     margin: auto;
     display: block;
-    width: 80%;
+    width: 90%;
     text-align: center;
     color: white;
     padding: 15px 0;
@@ -162,18 +156,17 @@
     font-weight: bold;
 }
 
-/* Bouton de fermeture */
 .close-modal {
     position: absolute;
-    top: 30px;
-    right: 50px;
+    top: 20px;
+    right: 25px;
     color: white;
-    font-size: 50px;
+    font-size: 45px;
     font-weight: bold;
     cursor: pointer;
+    line-height: 1;
 }
 
-/* Animation d'ouverture */
 .modal-content,
 #caption {
     animation-name: zoom;
@@ -190,19 +183,12 @@
     }
 }
 
-@media (max-width: 700px) {
-    .modal-content {
-        width: 95%;
-    }
-}
-
-/* --- Boutons spécifiques aux produits --- */
+/* Boutons produits */
 .btn-product {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 20px;
     background-color: var(--primary);
-    /* Vert forêt */
     color: white;
     text-decoration: none;
     border-radius: 4px;
@@ -212,25 +198,12 @@
     border: 1px solid var(--primary);
 }
 
-
 .btn-product:hover {
     background-color: transparent;
     color: var(--primary);
-
 }
 
-/* Pour le texte descriptif (le petit numéro 01, 02) */
-.produit-texte small {
-    font-size: 60px;
-    font-family: 'Playfair Display';
-    color: rgba(45, 71, 57, 0.08);
-    /* Votre vert forêt très transparent */
-    display: block;
-    margin-bottom: -35px;
-    font-weight: bold;
-}
-
-/* Style du sélecteur */
+/* Département selector */
 .dept-selector {
     margin: 15px 0;
     text-align: left;
@@ -241,4 +214,103 @@
     font-size: 14px;
     margin-bottom: 5px;
     color: #666;
+}
+
+/* ===================== */
+/* RESPONSIVE TABLETTES  */
+/* ===================== */
+@media (max-width: 900px) {
+    .produit-item {
+        gap: 25px;
+    }
+
+    .produit-figure img {
+        height: 280px;
+    }
+
+    .produit-texte h3 {
+        font-size: 22px;
+    }
+}
+
+/* ===================== */
+/* RESPONSIVE MOBILE     */
+/* ===================== */
+@media (max-width: 768px) {
+    .intro-technique {
+        padding: 35px 15px;
+    }
+
+    /* Passage en colonne sur mobile */
+    .produit-item {
+        flex-direction: column !important;
+        gap: 0;
+        padding: 0;
+        border-radius: 16px;
+        margin-bottom: 40px;
+    }
+
+    .produit-figure {
+        border-radius: 16px 16px 0 0;
+    }
+
+    .produit-figure img {
+        height: 240px;
+        border-radius: 16px 16px 0 0;
+    }
+
+    .produit-texte {
+        padding: 20px 18px;
+    }
+
+    .produit-texte small {
+        font-size: 45px;
+        margin-bottom: -28px;
+    }
+
+    .produit-texte h3 {
+        font-size: 20px;
+    }
+
+    .produit-texte p {
+        font-size: 14px;
+    }
+
+    .modal {
+        padding-top: 60px;
+    }
+
+    .modal-content {
+        max-width: 95%;
+        border-width: 2px;
+    }
+
+    .close-modal {
+        top: 15px;
+        right: 15px;
+        font-size: 36px;
+    }
+}
+
+/* ===================== */
+/* RESPONSIVE PETITS     */
+/* ===================== */
+@media (max-width: 480px) {
+    .produit-figure img {
+        height: 200px;
+    }
+
+    .produit-texte h3 {
+        font-size: 18px;
+    }
+
+    .btn-product {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+
+    .produit-texte small {
+        font-size: 36px;
+    }
 }
