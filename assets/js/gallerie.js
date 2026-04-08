@@ -6,11 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const allImages = [
         "bois47.jpeg", "camion.jpeg", "camion2.jpeg", "chemin_bois.jpeg",
-        "chemin_neige.jpeg", "famille.jpeg", "gros_troncon.jpeg",
+        "chemin_neige.jpeg", "famille.jpeg", "gros_bois.jpeg", "gros_troncon.jpeg",
         "grosse_pile_bois.jpeg", "grosse_pile_piquet.jpeg", "grume.jpeg",
         "machine.jpeg", "marie_bois.jpeg", "mini_pile_bois.jpeg",
         "petite_pile_bois.jpeg", "pile_bois_piquet.jpeg", "pile_bois_soleil.jpeg",
-        "pile_piquet.jpeg", "quercus_cote.jpeg", "tracteur.jpeg", "tron_pres.jpeg"
+        "pile_piquet.jpeg", "quercus_cote.jpeg", "tracteur.jpeg", "tracteur2.jpeg", "tracteur3.jpeg", "tron_pres.jpeg"
     ];
 
     function shuffle(array) {

@@ -25,7 +25,7 @@ body {
 .hero-small {
     height: 30vh;
     min-height: 180px;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/tronçons.jpeg') center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/fond.jpg') center/cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -104,7 +104,7 @@ nav .logo img {
 header {
     height: 80vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('../images/tronçons.jpeg') center/cover no-repeat;
+        url('../images/fond.jpg') center/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -230,6 +230,36 @@ footer {
 .footer-socials a:hover {
     transform: translateY(-3px);
     opacity: 0.8;
+}
+
+.google-review-wrapper {
+    margin-top: 15px;
+}
+
+.btn-google {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #ffffff;
+    /* Fond blanc pour ressortir sur le footer */
+    color: #333;
+    /* Texte sombre */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    border: 1px solid #ddd;
+}
+
+.btn-google i {
+    color: #4285F4;
+    /* Le bleu officiel de Google */
+    margin-right: 8px;
+}
+
+.btn-google:hover {
+    background-color: #f1f1f1;
+    color: #000;
 }
 
 /* ===================== */
